@@ -1,8 +1,10 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.css'; 
+import 'G:\react\reactcompo\node_modules\bootstrap\dist\css\bootstrap.min.css.map'
 
 function App() {
   return (
+  <>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -19,6 +21,8 @@ function App() {
         </a>
       </header>
     </div>
+    
+  </>
   );
 }
 
