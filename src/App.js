@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css'; 
 import 'G:\react\reactcompo\node_modules\bootstrap\dist\css\bootstrap.min.css.map'
+import App from './CRA App2/App';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
+         <App/> 
           Learn React
         </a>
       </header>

@@ -6,7 +6,7 @@ export default class TodoList extends Component {
       item:[],
       addtitle:'',
       adddescription:'',
-      editItem:'false',
+   // editItem:'false',
     };
   
     handleChange=(e) =>{
@@ -31,15 +31,11 @@ export default class TodoList extends Component {
     }  
       UpdateItem=(id)=>{
         console.log(id);
-        const filterItem=this.state.item.filter(element=> this.index!==id)
-        const selectItem=this.state.item.find(element=> this.index===id)
-        this.setState({
-        item:filterItem,
-        item:selectItem.addtitle,
-        item:selectItem.adddescription,
-        id:id,
-        editItem:true
-      }); 
+        const filterItem=this.state.item.filter((element,id)=>{
+
+        })
+         selectItem=this.state.item.find(element=> this.index===id)
+       
     }  
 
   render(){
@@ -61,7 +57,7 @@ export default class TodoList extends Component {
           return(
             <div key={this.index}>
               <div className="input-group">
-                <h5>{item}</h5>
+                <h5 className >{item}</h5>
               </div>
                 <button type="button" className="btn btn-primary" onDoubleClick={()=>this.deleteItem(this.index)}>Del</button>
                 <button type="button" className="btn btn-primary" onDoubleClick={()=>this.UpdateItem(this.index)}>Edit</button>
