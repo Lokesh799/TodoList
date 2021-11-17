@@ -1,10 +1,10 @@
 import { GET_USER } from "../actions";
 
 const initialState = {
-  user: {},
+  user: [],
   }
 
-  export default function users (state = initialState, action) {
+  const users= (state = initialState, action)=> {
     switch (action.type) {
       case GET_USER:
         return {
@@ -15,3 +15,5 @@ const initialState = {
         return state;
     }
   }
+
+  export default users;
