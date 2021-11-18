@@ -1,4 +1,5 @@
 import { EDIT_USER } from "../actions";
+import { SHOW_MODEL } from "../actions";
 
 const initialState = {
   editUser: {
@@ -6,7 +7,7 @@ const initialState = {
   username:"",
   email:""    
     },
-  }
+    show:true }
 
   const editUsers= (state = initialState, action)=> {
     switch (action.type) {
@@ -15,9 +16,17 @@ const initialState = {
           ...state,
           editUser: action.payload,
         };
+
+        case SHOW_MODEL:
+        return {
+          ...state,
+          show: action.payload,
+        };
       default:
         return state;
     }
   }
+
+  
 
   export default editUsers;
